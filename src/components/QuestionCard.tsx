@@ -4,22 +4,22 @@ type Props = {
     questions: string;
     answers: string[];
     callback: any;
-    userAnswer: boolean;
-    questionNr: number;
+    userAnswer: any;
+    questionNumber: number;
     totalQuestions: number;
 };
 
 const QuestionCard: React.FC<Props> = ({
     questions,
     answers,
-    questionNr,
+    questionNumber,
     callback,
     userAnswer,
     totalQuestions,
 }) => (
     <div>
         <p className="number">
-            Question: {questionNr} / {totalQuestions}
+            Question: {questionNumber} / {totalQuestions}
         </p>
         <p dangerouslySetInnerHTML={{ __html: questions }}></p>
         <div>
